@@ -2,7 +2,9 @@
 
 Basic aggregation class for JSON-type JavaScript objects.
 
-Use example:
+##Use examples
+
+###Basic aggregation
 
 Given a dataset like:
 
@@ -47,6 +49,8 @@ will return:
  { foo: 2, bar: 3, count: 2 }
 ]
 ```
+
+###Formatting columns
 
 You can format a column return value by passign a mapping function
 in the options. Let's see an example:
@@ -106,6 +110,8 @@ will return:
 ]
 ```
 
+###Aliases
+
 To give an alias to a grouped column the same way as in any DB language, by
 following the structure:
 
@@ -126,5 +132,5 @@ will return:
 ]
 ```
 
-NOTE: to format a column with an alias, the mapping function has to be
-assigned to the alias, not the original column name.
+*NOTE: to format a column with an alias, the mapping function has to be
+assigned to the alias, not the original column name.*
