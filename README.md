@@ -34,11 +34,7 @@ will return:
 ]
 ```
 
-```javascript
-aggregate(data, ['foo', 'bar']) 
-```
-
-will return:
+`aggregate(data, ['foo', 'bar'])` will return:
 
 ```javascript
 [
@@ -119,9 +115,7 @@ following the structure:
 <columnName> as <alias>
 ```
 
-So, with the previous data
-aggregate(data, ['foo as foobar', 'bar as barfoo'])
-will return:
+So, with the previous data, `aggregate(data, ['foo as foobar', 'bar as barfoo'])` will return:
 
 ```javascript
 [
