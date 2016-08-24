@@ -131,7 +131,10 @@
   ** @options: object with the options to set
   **/
   Aggregation.prototype.setOptions = function (options) {
-    this.options = { 'map': options.map || {} };
+    this.options = { 
+      'map': options.map || {},
+      'countField': options.countField || 'count'
+    };
   };
 
   /**
@@ -161,9 +164,9 @@
       }
 
       if (index !== -1) 
-        this.aggregatedData[i].count++;
+        this.aggregatedData[i][this.options.countField]++;
       else {
-        elem.count = 1;
+        elem[this.options.countField] = 1;
         this.aggregatedData.push(elem);
       }
     });
